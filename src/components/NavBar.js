@@ -1,12 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../logo.svg';
 
+import logo from '../logo.svg';
+import CartWidget from './CartWidget'
 
 function NavBar() {
   return (
     
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      
+       
       <div className="container">
       <img src={logo}           style={{ width: '70px', height: '70px' }} className="" alt="logo" />
 <a className="navbar-brand" href="/">Loja teste coder</a>
@@ -31,9 +32,13 @@ function NavBar() {
             <a className="nav-link" href="/">móveis</a>
             </li>
           </ul>
+       
         </div>
+        <CartWidget />
+
       </div>
     </nav>
-  );
+ 
+ );
 }
 export default NavBar;
