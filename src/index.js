@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import NavBar from './components/NavBar';
 import reportWebVitals from './reportWebVitals';
-import ItemListContainer from './components/ItemListContainer';
+import ListaItem from './components/ListaItem';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <NavBar />
   
-    <ItemListContainer greeting="Bem-vindo à loja Teste!" />
+    <ListaItem greeting="Bem-vindo à loja Teste!" />
   </React.StrictMode>
 );
 
