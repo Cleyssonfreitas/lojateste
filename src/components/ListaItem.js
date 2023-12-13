@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 
-const ItemListContainer = ({ greeting }) => {
+const ListaItem = ({ greeting }) => {
   const handleAddToCart = (quantity) => {
 
     console.log(`Adicionar ${quantity} itens ao carrinho`);
@@ -14,5 +14,5 @@ const ItemListContainer = ({ greeting }) => {
     </div>
   );
 }
-
-export default ItemListContainer;
+  
+export default ListaItem;
