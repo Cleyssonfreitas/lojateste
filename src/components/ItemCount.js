@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ initial, onAdd, stock }) => {
   const [quantity, setQuantity] = useState(initial);
 
   const handleIncrement = () => {
@@ -17,7 +17,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 
   const handleAddToCart = () => {
     if (onAdd) {
-      onAdd(quantity);
+      const newQuantity = quantity > stock ? stock : quantity;
+      onAdd(newQuantity);
     }
   };
 
@@ -29,6 +30,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         <button onClick={handleIncrement}>+</button>
       </div>
       <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+      <p>Estoque disponível: {stock}</p>
     </div>
   );
 };
